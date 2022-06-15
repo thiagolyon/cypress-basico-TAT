@@ -6,4 +6,5 @@ Cypress.Commands.add('fillMandatoryFieldsAndSubmit', () => {
     cy.get('#email').type('thiago.lyon.passos@gmail.com').should('have.value', 'thiago.lyon.passos@gmail.com');
     cy.get('#open-text-area').type('Campo obrigatório').should('have.value', 'Campo obrigatório');
     cy.contains('button', 'Enviar').click();
+    cy.get('.success').should('be.visible');
 }) 
